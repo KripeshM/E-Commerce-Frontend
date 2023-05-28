@@ -1,0 +1,32 @@
+ <!-- Product section-->
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" [src]="product.image" alt="..." width="400px" height="500px"/>
+            </div>
+            <div class="col-md-6">
+                <div class="fs-3"><i class="fa-solid fa-star"></i>{{product.rating.rate}}</div>
+                <h1 class="display-5 fw-bolder">{{product.title}}</h1>
+                <div class="small mb-1 fs-5">Category:&nbsp;{{product.category}}</div>
+                <div class="fs-5 mb-3 ">
+                    <span class="text-decoration-line-through">{{strikedPrice}}</span>&nbsp;
+                    <span class="fs-2 fw-bold">${{product.price}}</span>
+                </div>
+                <div class="fs-4 mb-3">Available stock:&nbsp;<span class="fw-bold">{{product.rating.count}}</span></div>
+                <p class="lead">{{product.description}}</p>
+                <div class="d-flex">
+                    <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> -->
+                    <button (click)="addtowishlist()" class="btn btn-outline-dark flex-shrink-0 me-4 fw-bold" type="button">
+                        <i class="fa-solid fa-heart-circle-plus"></i>
+                        Add to wishlist
+                    </button>
+                    <button (click)="addtocart(product)" class="btn btn-outline-dark flex-shrink-0 fw-bold" type="button">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

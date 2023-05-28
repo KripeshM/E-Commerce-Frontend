@@ -1,0 +1,32 @@
+.banner{
+    background-image:url('https://t4.ftcdn.net/jpg/04/29/15/65/360_F_429156592_zqpQBbC0PHKJWStgp3SYt61wpXnpGul6.jpg');
+    /* background-size:contain; */
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    
+
+    
+}
+.add:hover::before {
+    content: attr(title);
+    background-color: #333;
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+.card img{
+    transition: 1s;
+  }
+
+.card img:hover{
+    transform: scale(1.1);
+
+}
+
+  
